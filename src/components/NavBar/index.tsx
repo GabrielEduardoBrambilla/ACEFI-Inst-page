@@ -1,9 +1,24 @@
-import { Container } from './styles'
+import { Container, ImgWrapper, ItemsWrapper, NavContent } from './styles'
+import Logo from '../../assets/Logo 1.svg'
 
-export default function NavBar() {
+interface NavBarProps {
+  FirstId: string
+  SecondId: string
+  ThirdId: string
+}
+export default function NavBar({ FirstId, SecondId, ThirdId }: NavBarProps) {
   return (
     <Container>
-      <p>NavBAR</p>
+      <NavContent>
+        <ImgWrapper>
+          <img src={Logo} alt="" />
+        </ImgWrapper>
+        <ItemsWrapper className="">
+          <a href={FirstId}>Nossa história</a>
+          <a href={SecondId}>Voluntarios</a>
+          <a href={ThirdId}>Próximos eventos</a>
+        </ItemsWrapper>
+      </NavContent>
     </Container>
   )
 }

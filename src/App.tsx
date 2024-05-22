@@ -1,3 +1,4 @@
+import MainBanner from './components/MainBanner'
 import NavBar from './components/NavBar'
 import { GlobalStyle } from './styles/global'
 function App() {
@@ -5,7 +6,7 @@ function App() {
     <>
       <GlobalStyle />
       <NavBar />
-      {/* <MainBanner /> */}
+      <MainBanner />
       {/* <ContentSection /> */}
       {/* <ContentSection /> */}
       {/* <Galeria /> */}

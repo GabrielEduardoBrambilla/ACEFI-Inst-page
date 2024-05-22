@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
+    font-family: Inter;
     -webkit-font-smoothing: antialiased;
   }
 
