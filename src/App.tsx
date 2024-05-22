@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import NavBar from './components/NavBar'
-import 'styles.modules.css'
+import { GlobalStyle } from './styles/global'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <GlobalStyle />
       <NavBar />
       {/* <MainBanner /> */}
       {/* <ContentSection /> */}
