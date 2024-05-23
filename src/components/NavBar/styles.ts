@@ -4,7 +4,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f26d09;
+  background-color: rgba(242, 109, 9, 0.6);
+  position: absolute;
+  width: 100%;
+  font-weight: 700;
   height: 65px;
 `
 export const NavContent = styled.div`
