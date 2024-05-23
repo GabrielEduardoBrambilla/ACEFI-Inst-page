@@ -6,6 +6,7 @@ import Location from './assets/Location.png'
 import Volunteer from './assets/Volunteer.png'
 import Gallery from './components/Galery'
 import History from './components/History'
+import ContactForm from './components/ContactForm'
 
 const Texto_Principal = `Venha prestigiar nosso evento neste domingo dia {data}, e experimente
 nosso buffe de sukiyaki assim como varias outras opções de pratos
@@ -34,7 +35,7 @@ function App() {
       {/* <ContentSection /> */}
       <Gallery />
       <History />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </>
   )
 }
