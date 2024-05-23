@@ -32,20 +32,20 @@ export default function App() {
 
   return (
     <Container>
-      <PhotoAlbum
-        photos={photos}
-        layout="columns"
-        spacing={0}
-        targetRowHeight={552}
-        onClick={({ index }) => setIndex(index)}
-      />
-
       <Lightbox
         slides={photos}
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}
         plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+      />
+      <PhotoAlbum
+        photos={photos}
+        layout="columns"
+        spacing={0}
+        columns={2}
+        targetRowHeight={552}
+        onClick={({ index }) => setIndex(index)}
       />
     </Container>
   )

@@ -16,21 +16,20 @@ export const Container = styled.div`
   }
 `
 
-export const TextWrapperBackground = styled.div`
+export const TextWrapper = styled.div`
+  display: flex;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-weight: 500;
+  padding: 16px 8px;
   background: linear-gradient(
     90deg,
     rgba(209, 123, 61, 1) 0%,
     rgba(242, 26, 38, 1) 100%
   );
-`
-export const TextWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  color: whitesmoke;
-  gap: 16px;
-  font-weight: 500;
-  padding: 16px 0;
-
   overflow: hidden;
   flex-wrap: wrap;
 `

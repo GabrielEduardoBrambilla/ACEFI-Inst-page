@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 export const Container = styled.form`
   position: relative;
+  max-width: 1350px;
 
   display: flex;
   flex-direction: column;
@@ -8,6 +9,29 @@ export const Container = styled.form`
   gap: 16px;
   margin: 16px;
   border-style: none;
+  input {
+    background-color: #d9d9d9;
+    border: transparent;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: start;
+  }
+  @media (min-width: 526px) {
+    text-align: center;
+    width: 100%;
+    margin: 32px auto;
+  }
+`
+export const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: 526px) {
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+  }
 `
 export const InputWrapper = styled.div`
   display: flex;
@@ -16,13 +40,28 @@ export const InputWrapper = styled.div`
   justify-content: space-between;
   flex-direction: column;
 `
+export const TextWrapper = styled.div``
 export const MessageWrapper = styled.div`
-  input {
+  textarea {
+    background-color: #d9d9d9;
+    border: transparent;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: start;
     width: 100%;
     height: 315px;
-    border-radius: 10px;
+    text-align: start;
+    vertical-align: top;
+    resize: none;
+    &::placeholder {
+      text-align: start;
+      vertical-align: top;
+    }
   }
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 45px;
     height: 45px;
@@ -30,5 +69,12 @@ export const MessageWrapper = styled.div`
     right: 0;
     border-radius: 100%;
     margin: 8px;
+    border: transparent;
+    background-color: #d37e40;
+    > svg {
+      height: 30px;
+      width: 30px;
+      color: white;
+    }
   }
 `

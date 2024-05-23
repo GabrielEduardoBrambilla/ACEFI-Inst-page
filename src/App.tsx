@@ -7,6 +7,7 @@ import Volunteer from './assets/Volunteer.png'
 import Gallery from './components/Galery'
 import History from './components/History'
 import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 
 const Texto_Principal = `Venha prestigiar nosso evento neste domingo dia {data}, e experimente
 nosso buffe de sukiyaki assim como varias outras opções de pratos
@@ -21,7 +22,7 @@ function App() {
     <>
       <GlobalStyle />
       <NavBar />
-      <MainBanner diaEscrito="Dois de julho" diaNumero="02/06" />
+      <MainBanner diaEscrito=" DOIS DE JULHO " diaNumero=" 02/06 " />
       <ContentSection
         titulo="Participe do Caicam"
         textoPrincipal={Texto_Principal}
@@ -32,10 +33,10 @@ function App() {
         textoPrincipal={Texto_Principal}
         image={Volunteer}
       />
-      {/* <ContentSection /> */}
       <Gallery />
       <History />
       <ContactForm />
+      <Footer />
     </>
   )
 }
