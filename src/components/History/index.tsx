@@ -1,9 +1,10 @@
-import React from 'react'
 import { Container } from './styles'
-
-export default function History() {
+interface HistoryProps {
+  id: string
+}
+export default function History({ id }: HistoryProps) {
   return (
-    <Container>
+    <Container id={id}>
       <h2>
         História da Associação Cultural e Esportiva Nipo Brasileira, ACEFI
       </h2>

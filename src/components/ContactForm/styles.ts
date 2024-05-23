@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 export const Container = styled.form`
   position: relative;
-  max-width: 1350px;
-
   display: flex;
   flex-direction: column;
   max-width: 764px;
@@ -17,12 +15,15 @@ export const Container = styled.form`
     text-align: start;
   }
   @media (min-width: 526px) {
+    max-width: 1350px;
     text-align: center;
     width: 100%;
     margin: 32px auto;
   }
 `
 export const FormWrapper = styled.div`
+  max-width: 1350px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -39,8 +40,13 @@ export const InputWrapper = styled.div`
   gap: 16px;
   justify-content: space-between;
   flex-direction: column;
+  > input {
+    height: 100%;
+  }
+  @media (min-width: 526px) {
+    width: 50%;
+  }
 `
-export const TextWrapper = styled.div``
 export const MessageWrapper = styled.div`
   textarea {
     background-color: #d9d9d9;
@@ -77,4 +83,10 @@ export const MessageWrapper = styled.div`
       color: white;
     }
   }
+
+  @media (min-width: 526px) {
+    width: 50%;
+  }
 `
+
+export const TextWrapper = styled.div``

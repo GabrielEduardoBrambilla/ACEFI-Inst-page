@@ -15,26 +15,27 @@ tipicos que estarão disponiveis no Cai na hora.
 Crianças 6 a 8 anos: não pagam
 Jovem adolescente 9 a 12: R$35,00
 Adultos: compra antecipada R$40,00 | na hora R$45,00`
-const Texto_Secundario = `O caicam é realizado com ajuda de voluntarios se quiser passar um dia conosco e nos ajudar a realizar o evento seria um prazer recebelo para participar como voluntariado entre em contato com 45 998294308
-`
+
 function App() {
   return (
     <>
       <GlobalStyle />
-      <NavBar />
+      <NavBar FirstId="history" SecondId="voluntario" ThirdId="" />
       <MainBanner diaEscrito=" DOIS DE JULHO " diaNumero=" 02/06 " />
       <ContentSection
+        id="nada"
         titulo="Participe do Caicam"
         textoPrincipal={Texto_Principal}
         image={Location}
       />
       <ContentSection
+        id="voluntario"
         titulo="Voluntariado"
         textoPrincipal={Texto_Principal}
         image={Volunteer}
       />
       <Gallery />
-      <History />
+      <History id="history" />
       <ContactForm />
       <Footer />
     </>

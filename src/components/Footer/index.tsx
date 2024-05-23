@@ -1,6 +1,4 @@
-import React from 'react'
 import { Container, TextWrapper } from './styles'
-import Banner from '../../assets/Banner.png'
 
 export default function Footer() {
   return (

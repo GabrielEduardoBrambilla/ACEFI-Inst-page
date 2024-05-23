@@ -14,9 +14,9 @@ export default function NavBar({ FirstId, SecondId, ThirdId }: NavBarProps) {
           <img src={Logo} alt="" />
         </ImgWrapper>
         <ItemsWrapper className="">
-          <a href={FirstId}>Nossa história</a>
-          <a href={SecondId}>Voluntarios</a>
-          <a href={ThirdId}>Próximos eventos</a>
+          <a href={`#${FirstId}`}>Nossa história</a>
+          <a href={`#${SecondId}`}>Voluntarios</a>
+          <a href={`#${ThirdId}`}>Próximos eventos</a>
         </ItemsWrapper>
       </NavContent>
     </Container>

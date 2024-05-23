@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container, TextWrapper, TextWrapperBackground } from './styles'
 import Banner from '../../assets/Banner.png'
 import Marquee from 'react-fast-marquee'

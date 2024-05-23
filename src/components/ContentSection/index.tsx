@@ -4,14 +4,16 @@ interface ContentSectionProps {
   titulo: string
   textoPrincipal: string
   image: string
+  id: string
 }
 export default function ContentSection({
   image,
+  id,
   textoPrincipal,
   titulo
 }: ContentSectionProps) {
   return (
-    <Container>
+    <Container id={id}>
       <TextWrapper>
         <h2>{titulo}</h2>
         <p>{textoPrincipal}</p>

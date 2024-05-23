@@ -16,6 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Inter;
     -webkit-font-smoothing: antialiased;
   }
+  @media (min-width: 526px) {
+  }
 
   
 `
