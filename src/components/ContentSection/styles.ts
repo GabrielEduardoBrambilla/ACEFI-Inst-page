@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 16px 8px 0px;
+  padding: 16px 8px;
 `
 
 export const TextWrapper = styled.div``
