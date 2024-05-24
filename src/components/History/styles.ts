@@ -4,7 +4,7 @@ export const Container = styled.div`
   max-width: 1350px;
   margin: 16px;
   > h2 {
-    margin: 32px 0 0;
+    /* margin: 32px 0 0; */
     text-align: center;
   }
   h4 {

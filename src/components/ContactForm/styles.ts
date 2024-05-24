@@ -15,7 +15,7 @@ export const Container = styled.form`
     text-align: start;
   }
   @media (min-width: 526px) {
-    max-width: 1350px;
+    max-width: 1200px;
     text-align: center;
     width: 100%;
     margin: 32px auto;

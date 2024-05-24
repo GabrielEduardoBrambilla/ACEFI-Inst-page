@@ -5,21 +5,31 @@ interface ContentSectionProps {
   textoPrincipal: string
   image: string
   id: string
+  url?: string
+  reverse?: boolean
 }
 export default function ContentSection({
   image,
   id,
   textoPrincipal,
-  titulo
+  titulo,
+  reverse,
+  url
 }: ContentSectionProps) {
   return (
-    <Container id={id}>
+    <Container reverse={reverse} id={id}>
       <TextWrapper>
         <h2>{titulo}</h2>
         <p>{textoPrincipal}</p>
       </TextWrapper>
-      <ImgWrapper>
-        <img src={image} alt="" />
+      <ImgWrapper url={url}>
+        {url ? (
+          <a target="_blank" href={`${url}`}>
+            <img src={image} alt="" />
+          </a>
+        ) : (
+          <img src={image} alt="" />
+        )}
       </ImgWrapper>
     </Container>
   )

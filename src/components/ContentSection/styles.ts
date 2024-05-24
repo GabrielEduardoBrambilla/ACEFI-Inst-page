@@ -1,6 +1,9 @@
 import styled from 'styled-components'
-
-export const Container = styled.div`
+interface ContainerProps {
+  reverse?: boolean
+  url?: string
+}
+export const Container = styled.div<ContainerProps>`
   min-width: 300px;
   max-width: 1350px;
   display: flex;
@@ -9,7 +12,7 @@ export const Container = styled.div`
   padding: 16px 8px;
   @media (min-width: 526px) {
     display: flex;
-    flex-direction: row;
+    flex-direction: ${props => (props.reverse ? 'row-reverse' : 'row')};
     /* grid-template-columns: 1fr 1fr; */
     /* align-items: center; */
     margin: auto;
@@ -24,14 +27,17 @@ export const TextWrapper = styled.div`
     margin-bottom: 8px;
   }
 `
-export const ImgWrapper = styled.div`
+export const ImgWrapper = styled.div<ContainerProps>`
   display: flex;
   align-items: center;
-  flex: 1 1 50%; /* Each item takes up 50% of the container's width */
-
-  > img {
+  flex: 1 1 50%;
+  cursor: ${props => (props.url ? 'pointer' : 'undefined')};
+  img {
     width: 100%;
     border-radius: 10px;
     object-fit: fill;
+  }
+  &:hover {
+    opacity: ${props => (props.url ? '.6' : 'undefined')};
   }
 `

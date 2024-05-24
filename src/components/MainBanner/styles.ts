@@ -1,6 +1,30 @@
 import styled from 'styled-components'
 
+export const SocialMedias = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 10px 10px 0 0;
+  bottom: 60px;
+  max-width: 195px;
+  width: 100%;
+  right: 58px;
+
+  position: absolute;
+
+  background-color: rgba(0, 26, 38, 0.8);
+`
+export const ImgWrapper = styled.div`
+  display: flex;
+  gap: 16px;
+  justify-content: space-evenly;
+  width: 100%;
+  img {
+    cursor: pointer;
+  }
+`
 export const Container = styled.div`
+  position: relative;
   margin: 0;
   padding: 0;
   background: linear-gradient(
@@ -13,6 +37,9 @@ export const Container = styled.div`
     min-height: 250px;
     max-height: 435px;
     object-fit: cover;
+    @media (min-width: 526px) {
+      max-height: 535px;
+    }
   }
 `
 
