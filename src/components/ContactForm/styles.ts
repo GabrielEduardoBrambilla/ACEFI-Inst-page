@@ -75,6 +75,7 @@ export const MessageWrapper = styled.div`
     right: 0;
     border-radius: 100%;
     margin: 8px;
+    cursor: pointer;
     border: transparent;
     background-color: #d37e40;
     > svg {

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Container,
   InputWrapper,
@@ -8,6 +9,28 @@ import {
 import { PaperPlaneTilt } from 'phosphor-react'
 
 export default function ContactForm() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault()
+    const phoneNumber = '5545998294308' // Replace with the target WhatsApp number in international format, e.g., '1234567890'
+    const text = `Nome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`
+    const encodedText = encodeURIComponent(text)
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedText}`
+    window.open(whatsappLink, '_blank')
+  }
+  // const handleSubmit = (event: React.FormEvent) => {
+  //   event.preventDefault()
+  //   const mailtoLink = `mailto:gabriel128.br@gmail.com?subject=${encodeURIComponent(
+  //     subject
+  //   )}&body=${encodeURIComponent(
+  //     `Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`
+  //   )}`
+  //   window.location.href = mailtoLink
+  // }
   return (
     <Container>
       <TextWrapper>
@@ -16,13 +39,35 @@ export default function ContactForm() {
       </TextWrapper>
       <FormWrapper>
         <InputWrapper>
-          <input type="text" placeholder="Seu nome" id="" />
-          <input type="email" placeholder="E-mail" id="" />
-          <input type="text" placeholder="Assunto" id="" />
+          <input
+            type="text"
+            value={name}
+            placeholder="Seu nome"
+            id=""
+            onChange={e => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            value={email}
+            placeholder="E-mail"
+            id=""
+            onChange={e => setEmail(e.target.value)}
+          />
+          <input
+            type="text"
+            value={subject}
+            placeholder="Assunto"
+            id=""
+            onChange={e => setSubject(e.target.value)}
+          />
         </InputWrapper>
         <MessageWrapper>
-          <textarea placeholder="Mensagem" />
-          <button type="submit">
+          <textarea
+            placeholder="Mensagem"
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+          />
+          <button onClick={handleSubmit} type="submit">
             <PaperPlaneTilt size={32} weight="fill" />
           </button>
         </MessageWrapper>
