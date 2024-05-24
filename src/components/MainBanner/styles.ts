@@ -1,25 +1,36 @@
 import styled from 'styled-components'
 
 export const SocialMedias = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 16px;
-  border-radius: 10px 10px 0 0;
-  bottom: 60px;
-  max-width: 195px;
-  width: 100%;
-  right: 58px;
+  display: none;
+  @media (min-width: 526px) {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 10px 10px 0 0;
+    bottom: 60px;
+    max-width: 12.185rem;
+    max-height: 60px;
 
-  position: absolute;
+    width: 100%;
+    right: 58px;
 
-  background-color: rgba(0, 26, 38, 0.8);
+    position: absolute;
+    background-color: rgba(0, 26, 38, 0.8);
+  }
 `
 export const ImgWrapper = styled.div`
+  display: none;
+
   display: flex;
   gap: 16px;
+  align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  min-height: 30px;
+  max-height: 50px;
   img {
+    height: 35px;
+    object-fit: contain;
     cursor: pointer;
   }
 `
@@ -27,11 +38,7 @@ export const Container = styled.div`
   position: relative;
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(209, 123, 61, 1) 0%,
-    rgba(242, 26, 38, 1) 100%
-  );
+  background: black;
   > img {
     width: 100%;
     min-height: 250px;
