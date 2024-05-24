@@ -15,15 +15,17 @@ interface MainBannerProps {
   diaEscrito: string
 }
 export default function MainBanner({ diaNumero, diaEscrito }: MainBannerProps) {
+  const encodedText = encodeURIComponent('Gostaria de falar sobre a ACEFI. ')
+  const whatsappLink = `https://wa.me/5545998294308?text=${encodedText}`
   return (
     <Container>
       <img src={Banner} alt="" />
       <SocialMedias>
         <ImgWrapper>
-          <a href="https://www.instagram.com/acififoz/">
+          <a target="_blank" href={whatsappLink}>
             <img src={whatsapp} alt="" />
           </a>
-          <a href="">
+          <a target="_blank" href="https://www.instagram.com/acififoz/">
             <img src={instagram} alt="" />
           </a>
         </ImgWrapper>
