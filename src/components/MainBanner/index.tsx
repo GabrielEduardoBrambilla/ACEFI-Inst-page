@@ -3,7 +3,8 @@ import {
   ImgWrapper,
   SocialMedias,
   TextWrapper,
-  TextWrapperBackground
+  TextWrapperBackground,
+  WidthAligner
 } from './styles'
 import Banner from '../../assets/Banner.png'
 import Marquee from 'react-fast-marquee'
@@ -20,16 +21,18 @@ export default function MainBanner({ diaNumero, diaEscrito }: MainBannerProps) {
   return (
     <Container>
       <img src={Banner} alt="" />
-      <SocialMedias>
-        <ImgWrapper>
-          <a target="_blank" href={whatsappLink}>
-            <img src={whatsapp} alt="" />
-          </a>
-          <a target="_blank" href="https://www.instagram.com/acififoz/">
-            <img src={instagram} alt="" />
-          </a>
-        </ImgWrapper>
-      </SocialMedias>
+      <WidthAligner>
+        <SocialMedias>
+          <ImgWrapper>
+            <a target="_blank" href={whatsappLink}>
+              <img src={whatsapp} alt="" />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/acififoz/">
+              <img src={instagram} alt="" />
+            </a>
+          </ImgWrapper>
+        </SocialMedias>
+      </WidthAligner>
       <TextWrapperBackground>
         <Marquee pauseOnClick>
           <TextWrapper>
