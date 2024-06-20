@@ -41,6 +41,7 @@ export const InputWrapper = styled.div`
   justify-content: space-between;
   flex-direction: column;
   > input {
+    font-size: 18px;
     height: 100%;
   }
   @media (min-width: 526px) {
@@ -49,9 +50,11 @@ export const InputWrapper = styled.div`
 `
 export const MessageWrapper = styled.div`
   textarea {
+    font-size: 18px;
+
     background-color: #d9d9d9;
     border: transparent;
-    padding: 8px;
+    padding: 16px;
     border-radius: 10px;
     text-align: start;
     width: 100%;

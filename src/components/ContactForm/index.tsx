@@ -22,15 +22,7 @@ export default function ContactForm() {
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedText}`
     window.open(whatsappLink, '_blank')
   }
-  // const handleSubmit = (event: React.FormEvent) => {
-  //   event.preventDefault()
-  //   const mailtoLink = `mailto:gabriel128.br@gmail.com?subject=${encodeURIComponent(
-  //     subject
-  //   )}&body=${encodeURIComponent(
-  //     `Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`
-  //   )}`
-  //   window.location.href = mailtoLink
-  // }
+
   return (
     <Container>
       <TextWrapper>
