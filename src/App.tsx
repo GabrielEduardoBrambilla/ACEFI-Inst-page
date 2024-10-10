@@ -1,14 +1,14 @@
-import ContentSection from './components/ContentSection'
-import MainBanner from './components/MainBanner'
-import NavBar from './components/NavBar'
-import { GlobalStyle } from './styles/global'
 import Location from './assets/Location.png'
 import Volunteer from './assets/Volunteer.png'
+import ContactForm from './components/ContactForm'
+import ContentSection from './components/ContentSection'
+import Footer from './components/Footer'
 import Gallery from './components/Galery'
 import History from './components/History'
-import ContactForm from './components/ContactForm'
-import Footer from './components/Footer'
+import MainBanner from './components/MainBanner'
+import NavBar from './components/NavBar'
 import { Container } from './styles'
+import { GlobalStyle } from './styles/global'
 
 const Texto_Principal = `Venha prestigiar nosso evento neste domingo dia {data}, e experimente
 nosso buffe de sukiyaki assim como varias outras opções de pratos
