@@ -6,7 +6,6 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
 // desktop
   display: flex;
-  margin: auto;
   flex: 1;
   min-width: 300px;
   max-width: 1350px;
@@ -18,9 +17,8 @@ export const Container = styled.div<ContainerProps>`
      margin: 0 2rem;
   }
   @media (min-width: 900px) {
-    flex-direction: ${props => (props.reverse ? 'row-reverse' : 'row')};,
-    margin: auto auto;
-    background:red;
+    flex-direction: ${props => (props.reverse ? 'row-reverse' : 'row')};
+    margin: auto;
  }
 
 `

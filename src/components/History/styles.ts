@@ -4,7 +4,6 @@ export const Container = styled.div`
   max-width: 1350px;
   margin: 16px;
   > h2 {
-    /* margin: 32px 0 0; */
     text-align: center;
   }
   h4 {
@@ -13,8 +12,13 @@ export const Container = styled.div`
   > p {
     text-align: justify;
   }
-  @media (min-width: 526px) {
-    padding: 16px;
+  @media (min-width: 500px) {
+     margin: 0 2rem;
+  }
+  @media (min-width: 900px) {
+    background:red;
+    padding: 0 2rem;
     margin: auto;
   }
+
 `
