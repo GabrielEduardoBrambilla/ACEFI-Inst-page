@@ -13,12 +13,10 @@ export const Container = styled.div`
     text-align: justify;
   }
   @media (min-width: 500px) {
-     margin: 0 2rem;
+    margin: 0 2rem;
   }
   @media (min-width: 900px) {
-    background:red;
     padding: 0 2rem;
     margin: auto;
   }
-
 `
