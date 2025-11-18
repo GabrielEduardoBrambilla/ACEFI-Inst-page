@@ -8,7 +8,7 @@ export const Container = styled.div`
     rgba(242, 109, 9, 1) 0%,
     rgba(242, 26, 38, 1) 100%
   );
-  margin-top: 80px;
+  margin-top: -16px;
 `
 
 export const TextWrapper = styled.div`

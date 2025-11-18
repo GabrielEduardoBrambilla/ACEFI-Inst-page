@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import {
+  FullWidthWrapper,
   Container,
   InputWrapper,
   MessageWrapper,
   FormWrapper,
-  TextWrapper
+  TextWrapper,
+  JapaneseLandscape
 } from './styles'
 import { PaperPlaneTilt } from 'phosphor-react'
 
@@ -24,46 +26,64 @@ export default function ContactForm() {
   }
 
   return (
-    <Container>
-      <TextWrapper>
-        <h2>Nos ajude com sua opinião</h2>
-        <p>Conte onde podemos melhorar</p>
-      </TextWrapper>
-      <FormWrapper>
-        <InputWrapper>
-          <input
-            type="text"
-            value={name}
-            placeholder="Seu nome"
-            id=""
-            onChange={e => setName(e.target.value)}
-          />
-          <input
-            type="email"
-            value={email}
-            placeholder="E-mail"
-            id=""
-            onChange={e => setEmail(e.target.value)}
-          />
-          <input
-            type="text"
-            value={subject}
-            placeholder="Assunto"
-            id=""
-            onChange={e => setSubject(e.target.value)}
-          />
-        </InputWrapper>
-        <MessageWrapper>
-          <textarea
-            placeholder="Mensagem"
-            value={message}
-            onChange={e => setMessage(e.target.value)}
-          />
-          <button onClick={handleSubmit} type="submit">
-            <PaperPlaneTilt size={32} weight="fill" />
-          </button>
-        </MessageWrapper>
-      </FormWrapper>
-    </Container>
+    <FullWidthWrapper>
+      <JapaneseLandscape>
+        <div className="sun"></div>
+        <div className="cloud cloud-1"></div>
+        <div className="cloud cloud-2"></div>
+        <div className="cloud cloud-3"></div>
+        <div className="mountain-left"></div>
+        <div className="mountain-right"></div>
+        <div className="mountain-shadow"></div>
+        <div className="mountain-snow"></div>
+        <div className="sakura sakura-1"></div>
+        <div className="sakura sakura-2"></div>
+        <div className="sakura sakura-3"></div>
+        <div className="sakura sakura-4"></div>
+        <div className="sakura sakura-5"></div>
+        <div className="sakura sakura-6"></div>
+      </JapaneseLandscape>
+      <Container>
+        <TextWrapper>
+          <h2>Nos ajude com sua opinião</h2>
+          <p>Conte onde podemos melhorar</p>
+        </TextWrapper>
+        <FormWrapper>
+          <InputWrapper>
+            <input
+              type="text"
+              value={name}
+              placeholder="Seu nome"
+              id=""
+              onChange={e => setName(e.target.value)}
+            />
+            <input
+              type="email"
+              value={email}
+              placeholder="E-mail"
+              id=""
+              onChange={e => setEmail(e.target.value)}
+            />
+            <input
+              type="text"
+              value={subject}
+              placeholder="Assunto"
+              id=""
+              onChange={e => setSubject(e.target.value)}
+            />
+          </InputWrapper>
+          <MessageWrapper>
+            <textarea
+              placeholder="Mensagem"
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+            />
+            <button onClick={handleSubmit} type="submit">
+              <PaperPlaneTilt size={32} weight="fill" />
+            </button>
+          </MessageWrapper>
+        </FormWrapper>
+      </Container>
+    </FullWidthWrapper>
   )
 }
