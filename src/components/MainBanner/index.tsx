@@ -1,3 +1,7 @@
+import Marquee from 'react-fast-marquee'
+import Banner from '../../assets/Banner.png'
+import instagram from '../../assets/instagram-fill.png'
+import whatsapp from '../../assets/whatsapp.png'
 import {
   Container,
   ImgWrapper,
@@ -6,10 +10,6 @@ import {
   TextWrapperBackground,
   WidthAligner
 } from './styles'
-import Banner from '../../assets/Banner.png'
-import Marquee from 'react-fast-marquee'
-import instagram from '../../assets/instagram-fill.png'
-import whatsapp from '../../assets/whatsapp.png'
 
 interface MainBannerProps {
   diaNumero: string
@@ -25,10 +25,10 @@ export default function MainBanner({ diaNumero, diaEscrito }: MainBannerProps) {
         <SocialMedias>
           <ImgWrapper>
             <a target="_blank" href={whatsappLink}>
-              <img src={whatsapp} alt="" />
+              <img src={whatsapp} alt="" className="whatsapp-icon" />
             </a>
-            <a target="_blank" href="https://www.instagram.com/acififoz/">
-              <img src={instagram} alt="" />
+            <a target="_blank" href="https://www.instagram.com/acefifoz/">
+              <img src={instagram} alt="" className="instagram-icon" />
             </a>
           </ImgWrapper>
         </SocialMedias>

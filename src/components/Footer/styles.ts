@@ -4,32 +4,34 @@ export const Container = styled.div`
   margin: 0;
   padding: 0;
   background: linear-gradient(
-    90deg,
-    rgba(209, 123, 61, 1) 0%,
+    135deg,
+    rgba(242, 109, 9, 1) 0%,
     rgba(242, 26, 38, 1) 100%
   );
-  > img {
-    width: 100%;
-    min-height: 250px;
-    max-height: 435px;
-    object-fit: cover;
-  }
+  margin-top: 80px;
 `
 
 export const TextWrapper = styled.div`
   display: flex;
-  height: 80px;
+  min-height: 100px;
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: whitesmoke;
+  color: white;
   font-weight: 500;
-  padding: 16px 8px;
-  background: linear-gradient(
-    90deg,
-    rgba(209, 123, 61, 1) 0%,
-    rgba(242, 26, 38, 1) 100%
-  );
+  padding: 32px 24px;
   overflow: hidden;
   flex-wrap: wrap;
+
+  p {
+    color: white;
+    opacity: 0.95;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 526px) {
+    p {
+      font-size: 1rem;
+    }
+  }
 `
