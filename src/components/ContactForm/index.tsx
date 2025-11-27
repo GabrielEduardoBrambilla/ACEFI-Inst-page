@@ -9,6 +9,7 @@ import {
   JapaneseLandscape
 } from './styles'
 import { PaperPlaneTilt } from 'phosphor-react'
+import { CONTACTS, STRINGS_PT } from '../../constants'
 
 export default function ContactForm() {
   const [name, setName] = useState('')
@@ -18,10 +19,9 @@ export default function ContactForm() {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
-    const phoneNumber = '5545998294308' // Replace with the target WhatsApp number in international format, e.g., '1234567890'
-    const text = `Nome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`
+    const text = `${STRINGS_PT.contactForm.whatsappTemplate.name}: ${name}\n${STRINGS_PT.contactForm.whatsappTemplate.email}: ${email}\n${STRINGS_PT.contactForm.whatsappTemplate.subject}: ${subject}\n\n${STRINGS_PT.contactForm.whatsappTemplate.message}:\n${message}`
     const encodedText = encodeURIComponent(text)
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedText}`
+    const whatsappLink = `https://wa.me/${CONTACTS.whatsapp.phoneNumber}?text=${encodedText}`
     window.open(whatsappLink, '_blank')
   }
 
@@ -45,36 +45,36 @@ export default function ContactForm() {
       </JapaneseLandscape>
       <Container>
         <TextWrapper>
-          <h2>Nos ajude com sua opinião</h2>
-          <p>Conte onde podemos melhorar</p>
+          <h2>{STRINGS_PT.contactForm.title}</h2>
+          <p>{STRINGS_PT.contactForm.subtitle}</p>
         </TextWrapper>
         <FormWrapper>
           <InputWrapper>
             <input
               type="text"
               value={name}
-              placeholder="Seu nome"
+              placeholder={STRINGS_PT.contactForm.placeholders.name}
               id=""
               onChange={e => setName(e.target.value)}
             />
             <input
               type="email"
               value={email}
-              placeholder="E-mail"
+              placeholder={STRINGS_PT.contactForm.placeholders.email}
               id=""
               onChange={e => setEmail(e.target.value)}
             />
             <input
               type="text"
               value={subject}
-              placeholder="Assunto"
+              placeholder={STRINGS_PT.contactForm.placeholders.subject}
               id=""
               onChange={e => setSubject(e.target.value)}
             />
           </InputWrapper>
           <MessageWrapper>
             <textarea
-              placeholder="Mensagem"
+              placeholder={STRINGS_PT.contactForm.placeholders.message}
               value={message}
               onChange={e => setMessage(e.target.value)}
             />

@@ -12,6 +12,11 @@ export const WidthAligner = styled.div`
   margin: 0 auto;
   z-index: 100;
   padding: 0 0 12px 0;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
 
   @media (min-width: 526px) {
     padding: 0 0 12px 0;
@@ -82,7 +87,8 @@ export const ImgWrapper = styled.div`
     }
 
     &.whatsapp-icon {
-      filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(98%) contrast(119%);
+      filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+        brightness(98%) contrast(119%);
     }
   }
 
@@ -106,6 +112,53 @@ export const Container = styled.div`
   padding: 0;
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 70px);
+  min-height: 500px;
+
+  .swiper {
+    width: 100%;
+    height: calc(100% - 70px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .swiper-slide-active {
+    z-index: 2;
+  }
+
+  .swiper-pagination {
+    bottom: 90px !important;
+    z-index: 10;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: linear-gradient(
+      135deg,
+      rgba(242, 109, 9, 1) 0%,
+      rgba(242, 26, 38, 1) 100%
+    );
+    width: 30px;
+    border-radius: 6px;
+  }
 
   &::before {
     content: '';
@@ -154,24 +207,23 @@ export const Container = styled.div`
       background-position: 0% 50%;
     }
   }
+`
 
-  > img {
-    width: 100%;
-    min-height: 400px;
-    max-height: 550px;
-    object-fit: cover;
-    opacity: 0.85;
-    position: relative;
-    z-index: 1;
-
-    @media (min-width: 526px) {
-      max-height: 650px;
-    }
-  }
+export const SlideImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.85;
+  position: relative;
+  z-index: 1;
 `
 
 export const TextWrapperBackground = styled.div`
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   overflow: hidden;
   z-index: 15;
 
